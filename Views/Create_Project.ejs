@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title><%=title%></title>
+        <link rel="stylesheet" type="text/css" href="create-project.css">
+        <link rel="stylesheet" href="Nav_Bar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <div id="gradient_Color">
+            <div id="main_Container">
+                <div id="name">
+                    <h3>Project Creation</h3>
+                </div>
+                <form id="form" action="/create-project" method="POST">
+                    <div class="input">
+                        <h4>Project Name</h4>
+                        <input type="text"  name="name" autocomplete="off" maxlength="40">
+                    </div>
+                    <div class="input">
+                        <h4>Description</h4>
+                        <input type="text"  name="description" autocomplete="off" maxlength="50">
+                    </div>
+                    <div class="input">
+                        <h4>Author</h4>
+                        <input type="text"  name="author" autocomplete="off" maxlength="30">
+                    </div>
+                    <div class="input">
+                        <h4>Completed Range</h4>
+                        <input type="range"  name="completion" min="0" max="100"  step="5">
+                    </div>
+                    
+                    <input type="submit" value="Add Project">
+                </form>
+                <div id="side_Color_Bar">
+
+                </div>
+                <div id="close_Button">
+                   <a href=""> <i style="color:red;font-size: 25px;"class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

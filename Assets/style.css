@@ -1,0 +1,115 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: white;
+    background-image: linear-gradient(to right,rgb(125, 212, 242),rgb(160, 236, 234));
+}
+
+#main_Container{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 20%;
+    /* border:1px solid black; */
+    height: 95vh;
+    width: 79%;
+    flex-direction: column;
+}
+
+#main_Container > button{
+    width:14%;
+    align-self: flex-end;
+    margin: 1% 8%;
+    background-color: rgb(235, 50, 112);
+    color:white;
+    padding:1% 0;
+    
+}
+#main_Container > button:hover{
+    background-color: rgb(89, 43, 132);
+}
+
+#main_Container > button a{
+    text-decoration: none;
+    color:white;
+    margin-right: 5%;
+    font-weight: bolder;
+}
+
+
+/* Projects Table Style part */
+
+#Projects_Table{
+    opacity: 0.8;
+    background-color: white;
+    border:1px solid black;
+    margin: 0 auto;
+    overflow-y: scroll;
+    display: table-row;
+    box-shadow: 0 0 10px 1px ;
+    border-radius: 14px;
+    height: 97vh;
+}
+#Projects_Table::-webkit-scrollbar{
+    display: none;
+  }
+#Projects_Table > a {
+    text-decoration: none;
+}
+
+.Table-row{
+    display: table-row;
+}
+.Table-row:hover{
+    background-color: antiquewhite;
+}
+.Table-cell{
+    display: table-cell;
+    padding:10px;
+    color:black;
+}
+.sixty{
+    width:60%;
+    text-align:left;
+    height: 40px;
+    max-width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ten{
+    width:16%;
+}
+.sticky{
+    position: sticky;
+    top:0;
+    background-color: rgb(58, 58, 63);
+    color:white;
+    font-weight: 300;
+}
+
+
+
+
+
+#Completion{
+    height: 5px;
+    border-radius: 3px;
+    width:100%;
+    background-color:lightcoral;
+    border:1px solid black;
+}
+#eighty{
+    display: inline-block;
+    width:80%;
+    height: 5px;
+    background-color:lightgray;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+

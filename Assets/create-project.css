@@ -1,0 +1,109 @@
+body{
+    overflow:hidden;
+}
+#gradient_Color{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,rgb(125, 212, 242),rgb(160, 236, 234));
+}
+#main_Container{
+    background-color: white;
+    width:50%;
+    height:70%;
+    border-radius: 14px;
+    box-shadow: 0 0 10px 1px ;
+    position: relative;
+
+}
+#name{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#name span{
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+#form{
+    padding-left: 10%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width:90%;
+    height:81%;
+    border-radius: 14px;
+    position: relative;
+}
+
+#form > input{
+    position: absolute;
+    width:35%;
+    bottom: 0;
+    left:30%;
+    height:10%;
+    border-radius: 14px;
+    margin:auto;
+    border:none;
+    box-shadow: 0 0 5px 1px;
+    background-color: rgb(66, 134, 245);
+    color:white;
+    font-size: 20px;
+}
+.input{
+    position: relative;
+}
+#form > .input input{
+    width:80%;
+    border:none;
+    margin:2% 0;
+    background-color: transparent;
+    border-radius: 12px;
+    height:30px;
+    background-color: rgb(178, 178, 178);
+    font-size: 12px;
+    padding-left: 2%;
+   font-weight: bolder;
+} 
+
+.input h4{
+    margin-top: 2%;
+   opacity: 0.5;
+}
+
+
+.input input:focus{
+   outline: none;
+}
+
+
+#close_Button{
+    position: absolute;
+    top:2%;
+    right: 2%;
+    width:30px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:5px solid white;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+#side_Color_Bar{
+    width:20px;
+    height:100%;
+    background-color: rgb(161, 66, 250);
+    position: absolute;
+    top:0;
+    right:0;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    opacity: 0.8;
+}

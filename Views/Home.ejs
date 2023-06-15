@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title><%=title%></title>
+        
+    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="Nav_Bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+    
+        <%- include('NavBar')%>
+        <div id="main_Container">
+            <button> <a href="/create-project">Create Project</a><i class="fa-regular fa-plus"></i></button>
+            <div style="width:98%; " id="Projects_Table">
+                <div class="Table-row">
+                    <h3 class="sticky ten Table-cell">Name</h3>
+                    <h3 class="sticky sixty Table-cell">Description</h3>
+                    <h3 class="sticky ten Table-cell">Author</h3>
+                    <h3 class="sticky ten Table-cell">Completion</h3>
+                </div>
+                <% for (i in Projects){ %>
+                    <a  class="Table-row" href="/project_description" style="cursor: pointer;">
+                            <h4 class="ten Table-cell"><%=Projects[i].name%></h4>
+                            <h4 class="sixty Table-cell"><%=Projects[i].description%></h4>
+                            <h4 class="ten Table-cell"><%=Projects[i].author%></h4>
+                            <h4 class="ten Table-cell"><%=Projects[i].completion%> %</h4> 
+                     </a>
+                <%}%>
+                
+            </table>
+        </div>
+    </body>
+</html>

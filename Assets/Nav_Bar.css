@@ -1,0 +1,56 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+
+/* Nav Bar Log & Application Name  */
+#App_name{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+#App_name i {
+    font-size: 40px;
+    margin-right: 5%;
+}
+#App_name h4{
+    align-self: flex-end;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgb(235, 50, 112);  
+}
+
+/* CSS for Nav-Bar */
+
+#nav_Bar{
+    position: fixed;
+    top:20px;
+    left: 10px;
+    width: 19%;
+    height: 95vh;
+    border-radius: 14px;
+    color:white;
+    background-color: rgb(58, 58, 63);
+}
+
+#nav_Bar a{
+    text-decoration: none;
+    color:white;
+}
+#nav_Bar > ul{
+   list-style-type: none;
+   margin-top: 15%;
+   
+}
+#nav_Bar > ul li:hover{
+    background-color:rgb(235, 50, 112);
+    border-radius:14px;
+}
+#nav_Bar > ul li{
+    padding:14px;
+    margin-left: 20px;
+    width:70%;
+}
+
