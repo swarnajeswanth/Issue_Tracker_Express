@@ -1,3 +1,91 @@
 body{
     background-image: linear-gradient(to right,rgb(125, 212, 242),rgb(160, 236, 234));
+    overflow: hidden;
+}
+.main_Container{
+    margin:73px auto;
+    height: 90.7vh;
+    border-radius: 14px;
+    width:95%;
+    background-color: white;
+    opacity: 0.7;
+    position:relative;
+    box-shadow: 0 0 10px 1px ;
+}
+.main_Container > *{
+    padding:1% 2%;
+}
+.main_Container > button{
+    background-color: rgb(92, 128, 140);
+    width:12%;
+    height:9%;
+    margin-top: 2px;
+    font-weight: bolder;
+    border-top-left-radius: 64px;
+    border-bottom-left-radius: 64px;
+}
+#issue_create{
+    position: absolute;
+    top:-60px;
+    right:0;
+    height: unset;
+    border-radius:unset;
+    background-color: rgb(233, 68, 123);
+    font-weight: bolder;
+}
+
+.main_Container > button  a{
+    text-decoration: none;
+    color:white;
+}
+#Project_Delete{
+    position: absolute;
+    right:0;
+    border-radius: unset;
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+}
+#table_header{
+    display: flex;
+}
+.Heading{
+    background-color: rgb(72, 89, 98);
+    color: white;
+}
+.filter{
+    display: flex;
+    
+    justify-content: space-between;
+
+}
+.filter > form{
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.filter > form > *{
+    margin-left: 2px;
+}
+#flex_container{
+    border-radius: 14px;
+    overflow-y: scroll;
+    height:77.5%;
+}
+#flex_container::-webkit-scrollbar{
+    display: none;
+  }
+#table_header{
+    width:100%;
+}
+#table_header > *{
+    text-align: center;
+    border:1px solid black;
+}
+.table-data{
+    display: flex;
+}
+
+.table-data > *{
+    border:1px solid black;
 }

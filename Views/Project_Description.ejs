@@ -1,27 +1,77 @@
 <html>
     <head>
-        <link rel="stylesheet" href="project_description.css">
-        <link rel="stylesheet" href="Nav_Bar.css">
+        <link rel="stylesheet" type="text/css" href="../../project_description.css">
+        <link rel="stylesheet" href="../../Nav_Bar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <%-include('NavBar')%>
+        <%- include('NavBar')%>
         <div class="main_Container">
+            <button type="button"> <a href="/"> Back to HomePage </a></button>
+            <button id="issue_create" type="button"> <a href='/create-issue?id=<%=id%>'>Create Issue</a></button>
+            <button id="Project_Delete" type="button"> <a  href='/project_description/delete?id=<%=id%>'>Delete Project</a></button>
+
+            <div id="project_details"> 
+                <% for (i of Projects){ %> 
+                    <h1 style="text-align: center;"><b><%=i.name%> Project</b></h1>
+                <%}%>
+            </div>
             <div class="header">
                 <h3>Bugs/Issues</h3>
-                <button type="button"> <a href="/project-description">Create Issue</a></button>
             </div>
             <div class="filter">
-                <!-- Filter by Author -->
-                <!-- Filter through searching the title -->
-                <!-- Filter by Project Name -->
+                <form action='/project_description/filter/:<%=id%>'>
+                    <h5>Reporter:</h5>
+                    <select name="Author" >
+                        <option value='blank'></option>  
+                        <% for(k of bug){%>
+                            <% for(j of k){%>
+                            <option value='<%=j.author%>'><%=j.author%></option>    
+                        <%}%>
+                        <%}%>
+                    </select>
+    
+                    <h5>Title:</h5>
+                    <select name="Name" >
+                        <option value='blank'></option>  
+                        <% for(k of bug){%>
+                            <% for(j of k){%>
+                            <option value='<%=j.title%>'><%=j.title%></option>    
+                        <%}%>
+                        <%}%>
+                    </select>
+                
+                    <input type="submit" value="Filter">
+                </form>
+                <form action="/project_description/filter1/:<%=id%>">
+                    <input type="text" placeholder="Search by Title" name="title" >
+                    <input type="text" placeholder="Search by Description" name="description" >
+                    <input type="text" placeholder="Search by Label" name="labels" >
+                    <input type="submit" value="Filter">
+                    
+                </form>
             </div>
-            <div class="table">
-                <!-- bug Name -->
-                <!-- status -->
-                <!-- created -->
-                <!-- Reporter -->
+            
+            <div id="flex_container">
+                <div id="table_header" class="Heading">
+                    <h3 style="width:20%">Title</h3>
+                    <h3 style="width:50%">Description</h3>
+                    <h3 style="width:20%">Labels</h3>
+                    <h3 style="width:15%">Reporter</h3>
+                </div>
+               
+                <%for(j of bug){%>
+                    <%for(k of j){%>
+                <div id="table_header">
+                    <h4 style="width:20%"><%=k.title%></h4>
+                    <h4 style="width:50%"><%=k.description%></h4>
+                    <h4 style="width:20%"><%=k.labels%></h4>
+                    <h4 style="width:15%"><%=k.author%></h4>
+                </div>
+                <%}%>
+                <%}%>
             </div>
         </div>
+        
     </body>
 </html>

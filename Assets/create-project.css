@@ -1,5 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+}
 body{
     overflow:hidden;
+   
 }
 #gradient_Color{
     width:100vw;
@@ -12,7 +17,7 @@ body{
 #main_Container{
     background-color: white;
     width:50%;
-    height:70%;
+    min-height:70%;
     border-radius: 14px;
     box-shadow: 0 0 10px 1px ;
     position: relative;
@@ -35,20 +40,19 @@ body{
     flex-direction: column;
     margin-top: 2%;
     width:90%;
-    height:81%;
+    /* height:81%; */
     border-radius: 14px;
     position: relative;
 }
 
 #form > input{
-    position: absolute;
-    width:35%;
-    bottom: 0;
-    left:30%;
-    height:10%;
+    
+    width:200px; 
+    height:40px;
     border-radius: 14px;
-    margin:auto;
+    margin-left: -20%;
     border:none;
+     align-self: center;
     box-shadow: 0 0 5px 1px;
     background-color: rgb(66, 134, 245);
     color:white;

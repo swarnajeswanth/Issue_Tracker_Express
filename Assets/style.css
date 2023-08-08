@@ -7,24 +7,26 @@ body{
     background-image: linear-gradient(to right,rgb(125, 212, 242),rgb(160, 236, 234));
 }
 
+
+
 #main_Container{
     display: flex;
-    margin-top: 15px;
-    margin-left: 20%;
-    /* border:1px solid black; */
-    height: 95vh;
-    width: 79%;
+    margin: 7px 1%;
+    height: 96vh;
     flex-direction: column;
+    flex-basis: 90%;
 }
 
 #main_Container > button{
+    position: absolute;
+    top:10px;
     width:14%;
-    align-self: flex-end;
-    margin: 1% 8%;
+    border:1px solid white;
     background-color: rgb(235, 50, 112);
     color:white;
-    padding:1% 0;
-    
+    padding:1% 0; 
+    z-index: 1;
+    right: 3%;
 }
 #main_Container > button:hover{
     background-color: rgb(89, 43, 132);
@@ -41,75 +43,101 @@ body{
 /* Projects Table Style part */
 
 #Projects_Table{
+    position: relative;
     opacity: 0.8;
     background-color: white;
-    border:1px solid black;
+    height: 98%;
     margin: 0 auto;
+    margin-top: 70px;
     overflow-y: scroll;
-    display: table-row;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 0 10px 1px ;
     border-radius: 14px;
-    height: 97vh;
 }
 #Projects_Table::-webkit-scrollbar{
     display: none;
   }
-#Projects_Table > a {
+#Projects_Table  a {
     text-decoration: none;
 }
 
 .Table-row{
-    display: table-row;
+    display: flex;
 }
-.Table-row:hover{
+.Table-data:hover{
     background-color: antiquewhite;
+    border-radius: 10px;
+}
+.sticky> h3{
+    color:white;
 }
 .Table-cell{
-    display: table-cell;
-    padding:10px;
+    padding:10px 1%;
     color:black;
-}
-.sixty{
-    width:60%;
-    text-align:left;
-    height: 40px;
-    max-width: 400px;
     overflow: hidden;
-    white-space: nowrap;
 }
-.ten{
-    width:16%;
+
+.Table-data{
+    margin: 1% 0;
+    width:98%;
+    
 }
+
 .sticky{
     position: sticky;
     top:0;
     background-color: rgb(58, 58, 63);
-    color:white;
     font-weight: 300;
+    z-index: 1;
 }
 
 
-
-
-
-#Completion{
+.Completion,._20,._40,._60,._80,._100{
     height: 5px;
     border-radius: 3px;
+    
+}
+.Completion{
     width:100%;
     background-color:lightcoral;
     border:1px solid black;
 }
-#eighty{
-    display: inline-block;
-    width:80%;
-    height: 5px;
-    background-color:lightgray;
-    border-radius: 3px;
+._20,._40,._60,._80,._100{
+    background-color: black;
+}
+._20{
+    width:20%;
 }
 
+._40{
+    width:40%;
+}
 
+._60{
+    width:60%;
+}
 
+._80{
+    width:80%;
+}
 
+._100{
+    width:100%;
+}
 
+.test{
+    position: relative;
+}
 
+.edit_Icon{
+    position: absolute;
+    margin: -46px 3px;
+    right:0;
+    font-size: 18px;
+    color:black;
+}
 
+.edit_Icon:hover{
+    color: rgb(89, 43, 132);
+}

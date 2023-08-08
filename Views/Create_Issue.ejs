@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="create-project.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <div id="gradient_Color">
+            <div id="main_Container">
+                <div id="name">
+                    <h3>Bug Report</h3>
+                </div>
+                <form id="form" action='/create-issue?id=<%=Project[0]._id%>' method="POST">
+                    <div class="input">
+                        <h4>Title</h4>
+                        <input type="text"  name="title" autocomplete="off" maxlength="40">
+                    </div>
+                    <div class="input">
+                        <h4>Description</h4>
+                        <input type="text"  name="description" autocomplete="off" >
+                    </div>
+                    <div class="input">
+                        <h4>Labels</h4>
+                        <input type='Search' id="label" name="labels"  autocomplete="off">
+                        <div class="labels"></div>
+                    </div>
+                    <div class="input">
+                        <h4>Author</h4>
+                        <input type="text"  name="author" autocomplete="off" maxlength="30">
+                    </div>
+                    
+                    
+                    <input id="submit" type="submit" value="Add Issue">
+                </form>
+                <div id="side_Color_Bar">
+
+                </div>
+                <div id="close_Button">
+                   <a href='/project_description/?id=<%=Project[0]._id%>'> <i style="color:red;font-size: 25px;"class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            const label=document.getElementById('label');
+            const label_Array=document.querySelector('.labels');
+
+            label.addEventListener('focusout',(e)=>{
+                label_Array.innerHTML+=` <div> ${label.value} <i id=${label.value} class="fa-solid fa-xmark"></i></div>`;
+                label.value="";
+            })
+            label_Array.addEventListener('click',(e)=>{
+                  e.srcElement.parentElement.remove();
+            })
+            const form_submit=document.getElementById('submit')
+            
+           
+            form_submit.addEventListener('click',()=>{
+                label_Array.querySelectorAll('div').forEach((p)=>{
+                    label.value+= `${p.innerHTML.split(' ')[1]} `
+                })
+                
+            })
+        </script>
+    </body>
+</html>
